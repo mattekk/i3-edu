@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridcasso</title>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="grid-container"></div>
+        
+        <div class="menu panel">
+            <button class="menu__item create-grid-menu-trigger">New Grid..</button>
+            <button class="menu__item button-reset">Reset</button>
+            <button class="menu__item color-menu-trigger">Choose color..</button>
+        </div>
+    
+    </div>
+
+    <section id="create-grid-menu">
+        <label for="dimension">Grid size ([16 - 64])</label>            
+        <input id="dimension" type="number" step=4 value=16 min=16 max=64 />
+        <br>
+        <button class="create-grid-menu-trigger btn-ok">Ok</button>
+        <button class="create-grid-menu-trigger btn-cancel">Cancel</button>        
+    </section>
+    
+    <section id="color-menu">
+        <div class="color-preview"></div>
+        <label>
+            Red:
+            <input class="red-range" type="range" min=0 max=255 />
+        </label>
+        <br>
+        <label>
+            Green:
+            <input class="green-range" type="range" min=0 max=255 />
+        </label>
+        <br>
+        <label>
+            Blue:
+            <input class="blue-range" type="range" min=0 max=255 />
+        </label>
+        <br>
+
+        <button class="color-menu-trigger btn-ok">Ok</button>
+        <button class="color-menu-trigger btn-cancel">Cancel</button>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>

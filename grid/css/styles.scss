@@ -1,0 +1,113 @@
+$vertical-margin-rythm: 20px;
+$container-padding: 10px;
+$cell-background-color: #FFFFFF;
+
+:root {
+    --columns: 2;
+    --cell-size: 60px;
+    --active-cell-color: $cell-background-color;   
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.container {
+    box-sizing: border-box;
+    padding: $container-padding;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100vh;
+    background-color: wheat;
+}
+
+.grid-container {
+    padding-top: 20px;
+    margin-bottom: $vertical-margin-rythm;
+    overflow: scroll;
+}
+
+.grid {
+    align-content: center;
+    justify-content: center;
+    max-width: calc(var(--columns) * var(--cell-size));
+    margin: 0 auto;
+    background-color: $cell-background-color;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), var(--cell-size));
+}
+
+.panel {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 10px 0;    
+    background-color: gray;
+    width: 100%;
+    transform: translateX(-$container-padding);
+    height: 50px;
+
+    & button {
+        height: 35px;
+        min-width: 50px;
+        margin: 0 10px;
+        background-color: $cell-background-color;
+        border-radius: 5px;
+    }
+}
+
+.btn-ok, .btn-cancel {
+    background-color: $cell-background-color;
+    border-radius: 5px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#create-grid-menu,
+#color-menu {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    padding: 10px;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9); 
+}
+
+#color-menu {
+    & .color-preview {
+        width: 100%;
+        margin: 10px auto;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    & button {
+        margin: 20px 10px 10px 10px; 
+    }
+}
+
+#create-grid-menu {
+    & button {
+        margin: 20px 10px 10px 10px; 
+    }
+}
+
+.cell {
+    border: 1px solid rgba(200, 200, 200, 0.7);
+}

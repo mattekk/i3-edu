@@ -1,0 +1,121 @@
+:root {
+  --columns: 2;
+  --cell-size: 60px;
+  --active-cell-color: $cell-background-color;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+}
+
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100vh;
+  background-color: wheat;
+}
+
+.grid-container {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  overflow: scroll;
+}
+
+.grid {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: calc(var(--columns) * var(--cell-size));
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (var(--cell-size))[var];
+      grid-template-columns: repeat(var(--columns), var(--cell-size));
+}
+
+.panel {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
+  background-color: gray;
+  width: 100%;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  height: 50px;
+}
+
+.panel button {
+  height: 35px;
+  min-width: 50px;
+  margin: 0 10px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.btn-ok, .btn-cancel {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#create-grid-menu,
+#color-menu {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  bottom: 75px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#color-menu .color-preview {
+  width: 100%;
+  margin: 10px auto;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#color-menu button {
+  margin: 20px 10px 10px 10px;
+}
+
+#create-grid-menu button {
+  margin: 20px 10px 10px 10px;
+}
+
+.cell {
+  border: 1px solid rgba(200, 200, 200, 0.7);
+}
+/*# sourceMappingURL=styles.css.map */
